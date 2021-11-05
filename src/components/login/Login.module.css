@@ -1,0 +1,8 @@
+.loginPage {
+  text-align: center;
+}
+
+.loginPage button {
+  background: seagreen;
+  padding: 5px 15px;
+}
