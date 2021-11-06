@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import classes from "./Body.module.css";
 
 const Body = () => {
   let [userPlaylists, setUserPlaylists] = useState([]);
   let [featuredPlaylists, setFeaturedPlaylists] = useState([]);
+  let userPlaylistsRef = useRef(null);
 
   const userPlaylistURL = "https://api.spotify.com/v1/me/playlists";
   const featuredPlaylistURL =
@@ -47,39 +48,31 @@ const Body = () => {
     getPlaylistHandler(userPlaylistURL);
   }, []);
 
+  const saveHandler = () => {
+    console.dir(userPlaylistsRef.current);
+  };
+
   return (
     <div className={classes.body}>
       <div className={classes.navbar}>Playlist Chooser</div>
 
       <div className={classes.section}>
-        <div className={classes.featuredPlaylist}>
+        <div className={classes.featuredPlaylists}>
           {featuredPlaylists.map((playlist) => {
             return (
-              <div key={playlist.id}>
-                <div>
-                  <img
-                    src={playlist.images[0].url}
-                    style={{ height: "60px", width: "60px" }}
-                    alt="playlist image"
-                  />
-                </div>
+              <div key={playlist.id} className={classes.listItem}>
+                <img src={playlist.images[0].url} alt="playlist image" />
                 <div>{playlist.name}</div>
               </div>
             );
           })}
         </div>
 
-        <div className={classes.myPlaylist}>
+        <div className={classes.myPlaylist} ref={userPlaylistsRef}>
           {userPlaylists.map((playlist) => {
             return (
-              <div key={playlist.id}>
-                <div>
-                  <img
-                    src={playlist.images[0].url}
-                    style={{ height: "60px", width: "60px" }}
-                    alt="playlist image"
-                  />
-                </div>
+              <div key={playlist.id} className={classes.listItem}>
+                <img src={playlist.images[0].url} alt="playlist image" />
                 <div>{playlist.name}</div>
               </div>
             );
@@ -88,7 +81,7 @@ const Body = () => {
       </div>
 
       <div className={classes.controlButtons}>
-        <button>Save</button>
+        <button onClick={saveHandler}>Save</button>
       </div>
       {/* <button onClick={getPlaylistHandler}>Show Playlist</button>
       <div>
