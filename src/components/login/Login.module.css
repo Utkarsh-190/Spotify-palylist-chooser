@@ -1,8 +1,33 @@
 .loginPage {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, var(--new-light-blue) 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.loginPage button {
-  background: seagreen;
+.loginCard {
+  height: 30%;
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loginCard button {
+  background: var(--light-green);
+  font-size: 1.5rem;
   padding: 5px 15px;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.loginCard button:hover {
+  background: #43e0a2;
+  letter-spacing: 2px;
 }

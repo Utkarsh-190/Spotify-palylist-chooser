@@ -1,0 +1,24 @@
+:root {
+  --purple: #6f42c1;
+  --light-purple: #ede4fb;
+  --dark-blue: #000248;
+  --blue: #0067ff;
+  --new-light-blue: #a7fff5;
+  --light-blue: #caf0f8;
+  --light-green: #5bcc9f;
+  --dark-creem: #ffcdb2;
+  --light-creem: #fef7e2;
+  --mustard: #f0e68c;
+  --black: #141414;
+
+  /* ---- colors from spotify ---- */
+  --green: #1ed760;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  color: var(--dark-blue);
+}
