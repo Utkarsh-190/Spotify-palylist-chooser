@@ -1,18 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import axios from "axios";
 import classes from "./Body.module.css";
 import { getDefaultNormalizer } from "@testing-library/dom";
 
 const Body = () => {
-  let dummyData = {
-    name: "no name",
-    id: "dummyId",
-    images: [{ url: "jfajda;a" }],
-  };
   let [lists, setLists] = useState({
     userPlaylists: [],
-    featuredPlaylists: new Array(),
+    featuredPlaylists: [],
   });
 
   const userPlaylistURL = "https://api.spotify.com/v1/me/playlists";
