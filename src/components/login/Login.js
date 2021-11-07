@@ -44,9 +44,12 @@ const Login = () => {
 
   return (
     <div className={classes.loginPage}>
-      <div className={classes.loginCard}>
-        <div>Login to your Spotify account</div>
-        <button onClick={loginHandler}>Login</button>
+      <div className={classes.navbar}>Playlist Chooser</div>
+      <div className={classes.body}>
+        <div className={classes.loginCard}>
+          <div>Login to your Spotify account</div>
+          <button onClick={loginHandler}>Login</button>
+        </div>
       </div>
     </div>
   );
