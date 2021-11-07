@@ -31,3 +31,8 @@
   background: #43e0a2;
   letter-spacing: 2px;
 }
+
+.loginCard button:active {
+  background: #014e1b;
+  border: 1px solid #05a73b;
+}
