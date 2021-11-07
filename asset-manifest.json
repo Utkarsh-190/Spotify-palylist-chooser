@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Spotify-palylist-chooser/static/css/main.4e7b2fd5.chunk.css",
+    "main.js": "/Spotify-palylist-chooser/static/js/main.e5815b9a.chunk.js",
+    "main.js.map": "/Spotify-palylist-chooser/static/js/main.e5815b9a.chunk.js.map",
+    "runtime-main.js": "/Spotify-palylist-chooser/static/js/runtime-main.cedf844c.js",
+    "runtime-main.js.map": "/Spotify-palylist-chooser/static/js/runtime-main.cedf844c.js.map",
+    "static/js/2.72069320.chunk.js": "/Spotify-palylist-chooser/static/js/2.72069320.chunk.js",
+    "static/js/2.72069320.chunk.js.map": "/Spotify-palylist-chooser/static/js/2.72069320.chunk.js.map",
+    "index.html": "/Spotify-palylist-chooser/index.html",
+    "static/css/main.4e7b2fd5.chunk.css.map": "/Spotify-palylist-chooser/static/css/main.4e7b2fd5.chunk.css.map",
+    "static/js/2.72069320.chunk.js.LICENSE.txt": "/Spotify-palylist-chooser/static/js/2.72069320.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cedf844c.js",
+    "static/js/2.72069320.chunk.js",
+    "static/css/main.4e7b2fd5.chunk.css",
+    "static/js/main.e5815b9a.chunk.js"
+  ]
+}
