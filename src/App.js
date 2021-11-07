@@ -8,6 +8,11 @@ function App() {
   // localStorage.clear();
   if (localStorage.getItem("accessToken") !== null && loggedin === false) {
     setLoggedin(true);
+  } else if (
+    localStorage.getItem("accessToken") === null &&
+    loggedin === true
+  ) {
+    setLoggedin(false);
   }
   return <div className="app">{loggedin ? <Body /> : <Login />}</div>;
 }

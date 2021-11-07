@@ -31,8 +31,8 @@ const Login = () => {
       } else {
         console.log(authParamsObj.access_token);
         localStorage.setItem("accessToken", authParamsObj.access_token);
-        const curDate = new Date();
-        localStorage.setItem("authHour", curDate.getHours());
+        localStorage.setItem("authDate", new Date());
+        localStorage.setItem("expireTime", authParamsObj.expires_in);
         window.location = "http://localhost:3000/";
       }
     }
