@@ -3,7 +3,8 @@ import classes from "./Login.module.css";
 
 let url = "https://accounts.spotify.com/authorize?";
 url += "client_id=" + "b62100f5a45b4136aff25a6e265201ea&";
-url += "redirect_uri=" + "http://localhost:3000/&";
+url +=
+  "redirect_uri=" + "https://utkarsh-190.github.io/Spotify-palylist-chooser/&";
 url += "response_type=" + "token&";
 url += "show_dialog&";
 url +=
@@ -33,7 +34,8 @@ const Login = () => {
         localStorage.setItem("accessToken", authParamsObj.access_token);
         localStorage.setItem("authDate", new Date());
         localStorage.setItem("expireTime", authParamsObj.expires_in);
-        window.location = "http://localhost:3000/";
+        window.location =
+          "https://utkarsh-190.github.io/Spotify-palylist-chooser/";
       }
     }
   }, []);

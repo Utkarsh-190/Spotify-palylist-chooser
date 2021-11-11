@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import axios from "axios";
 import classes from "./Body.module.css";
-import { getDefaultNormalizer } from "@testing-library/dom";
 
 const Body = () => {
   let [lists, setLists] = useState({
@@ -18,7 +17,7 @@ const Body = () => {
     localStorage.removeItem("expireTime");
     localStorage.removeItem("accessToken");
     localStorage.removeItem("authDate");
-    window.location = "http://localhost:3000/";
+    window.location = "https://utkarsh-190.github.io/Spotify-palylist-chooser/";
   };
 
   const getPlaylistHandler = (url) => {
